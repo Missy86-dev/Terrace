@@ -1,0 +1,138 @@
+header {
+  position: sticky;
+  z-index: 50;
+  background: rgba(250, 246, 240, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.1rem;
+}
+
+.logo {
+  font-family: var(--font-display) !important;
+  font-weight: 300 !important;
+  font-size: 1.75rem !important;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+
+  /* Smooth font rendering for clean serif edges */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+/* NAVBAR BUTTON STYLING (Replaces .nav-links a) */
+.nav-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body) !important;
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  color: var(--color-espresso) !important;
+  opacity: 0.7;
+  cursor: pointer;
+  letter-spacing: 0.14em !important;
+  position: relative;
+  padding: 0;
+}
+
+/* Animated Underline Effect */
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-amber);
+  transition: width 0.3s var(--ease);
+}
+
+/* Underline expands on hover */
+.nav-btn:hover::after {
+  width: 100%;
+}
+
+/* Underline stays full width when selected */
+.nav-btn.active::after {
+  width: 100%;
+}
+
+/* Optional: Slight font-weight bump when selected */
+.nav-btn.active {
+  font-weight: 600 !important;
+  opacity: 1;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links-mobile-toggle {
+  display: none;
+}
+
+/* CART BUTTON CONTAINER */
+/* ==========================================
+   CART BUTTON & BADGE (EXACT SCREENSHOT MATCH)
+========================================== */
+
+.cart-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  padding: 0;
+  color: #d91b5c; /* Deep Magenta/Pink for icon */
+  font-family: inherit;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.cart-button:hover {
+  transform: translateY(-1px); /* Gentle lift on hover */
+  opacity: 0.9;
+}
+
+.cart-button svg {
+  display: block;
+  stroke: #e63946; /* Vibrant Rose Pink icon stroke */
+}
+
+.cart-count {
+  /* Pink to Yellow linear gradient */
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 40%, #ffdd59 100%);
+  color: #2b2623; /* Deep contrast text color for readability */
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%; /* Circular badge */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  /* Soft pink/yellow glow shadow */
+  box-shadow: 0 2px 8px rgba(255, 117, 140, 0.4);
+}

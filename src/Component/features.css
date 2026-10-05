@@ -1,0 +1,62 @@
+.features {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-block: 1.5rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pill {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: transparent;
+  color: var(--color-espresso);
+  cursor: pointer;
+}
+
+.pill.active {
+  background: var(--color-amber);
+  border-color: var(--color-amber);
+  color: var(--color-surface);
+}
+
+.search-input {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px; /* Smooth rounded corners matching the image */
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-espresso);
+  min-width: 240px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* The double-border active/focus highlight effect */
+.search-input:focus,
+.search-input:focus-visible {
+  border-color: var(--color-amber);
+  /* Inner space created by white box-shadow + outer border created by outline offset */
+  box-shadow: 0 0 0 2px var(--color-surface);
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+.search-input::placeholder {
+  color: var(--color-brown);
+  opacity: 0.6;
+}

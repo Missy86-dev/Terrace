@@ -1,0 +1,18 @@
+.hero {
+  margin-top: 1.92rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.hero-text {
+  font-family: var(--font-body) !important;
+  max-width: 42ch;
+  line-height: 1.6;
+  color: inherit;
+  font-weight: 500 !important;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.2rem !important;
+  margin: 0;
+  opacity: 0.7;
+  letter-spacing: 0.14em !important;
+}

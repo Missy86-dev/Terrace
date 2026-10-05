@@ -1,0 +1,43 @@
+/* .footer-section {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  height: 70px;
+  margin-top: 0;
+  padding: 0 5rem;
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--color-brown);
+} */
+/* Container section that holds the border line */
+.footer-section {
+  width: 100%;
+  margin-top: 5rem;
+  border-top: 1px solid var(--color-line);
+  background: var(--color-bg);
+}
+
+/* Inner content aligned to page container */
+.footer-content {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* Copyright text styling */
+.footer-text {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-brown);
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+}
